@@ -1,18 +1,18 @@
-# MicroservicesApp.RESTCommunicationBetweenTwoMicroservices
+# MicroservicesApp.TwoServicesWithCleanCRUDs
 
-This project extends the previous step by enabling **REST communication** between the `OrderingService` and the `CatalogService`.  
-Orders now query product data from the Catalog API when creating a new order.
+This project contains two microservices (`CatalogService` and `OrderingService`) built with **ASP.NET Core 8** using **Clean Architecture** principles.  
+Each service has its own CRUD operations and a dedicated database.
 
 ## Features
-- Ordering microservice fetches product data via HTTP from the Catalog microservice
-- DTOs to separate internal and external communication
-- REST endpoints preserved in both services
+- Catalog microservice with CRUD for products
+- Ordering microservice with CRUD for orders
+- Clean Architecture (Domain, Application, Infrastructure, API layers)
+- SQL Server databases (one per microservice)
 
 ## Technologies
 - ASP.NET Core 8
 - Entity Framework Core
-- HttpClient for inter-service communication
 - SQL Server
 
 ## Purpose
-This step demonstrates **synchronous communication** between two microservices using REST.
+This is the **starting point** of the microservices journey, focusing on isolated CRUD services with proper architecture.
